@@ -51,7 +51,6 @@ extension ViewController: UICollectionViewDataSource {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FirstCollectionViewCell", for: indexPath) as? FirstCollectionViewCell else {
                 return UICollectionViewCell()
             }
-            cell.delegate = self
             cell.setupUI(string: list1[indexPath.row])
             return cell
         } else if collectionView == secondCollectionView {
@@ -68,20 +67,18 @@ extension ViewController: UICollectionViewDataSource {
     }
 }
 
+extension ViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == firstCollectionView {
+            itemIndexFirstCell = indexPath.row
+            secondCollectionView.reloadData()
+        }
+    }
+}
+
+
 extension ViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: view.frame.width/2, height: 200)
-    }
-}
-
-extension ViewController: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        itemIndexFirstCell = indexPath.row
-    }
-}
-
-extension ViewController: FirstCollectionViewCellDelegate {
-    func didSelectItem() {
-        secondCollectionView.reloadData()
     }
 }

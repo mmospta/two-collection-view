@@ -7,23 +7,15 @@
 
 import UIKit
 
-protocol FirstCollectionViewCellDelegate {
-    func didSelectItem()
-}
-
 class FirstCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var view: UIView!
-    
-    var delegate: FirstCollectionViewCellDelegate?
     
     override var isSelected: Bool {
         didSet {
             if isSelected {
                 label.textColor = UIColor.gray
                 view.backgroundColor = UIColor.gray
-                // delegate
-                delegate?.didSelectItem()
             } else {
                 label.textColor = UIColor.white
                 view.backgroundColor = UIColor.clear
