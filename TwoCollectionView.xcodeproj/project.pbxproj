@@ -45,6 +45,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D17BC802672508400919FDA /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8D28243B2671FACA00FB5753 /* FirstCollectionViewCell.swift */,
+				8D28243C2671FACA00FB5753 /* FirstCollectionViewCell.xib */,
+				8D2824402671FAF200FB5753 /* SecondCollectionViewCell.swift */,
+				8D2824412671FAF200FB5753 /* SecondCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		8D2824132671F3CF00FB5753 = {
 			isa = PBXGroup;
 			children = (
@@ -66,15 +77,12 @@
 			children = (
 				8D28241F2671F3CF00FB5753 /* AppDelegate.swift */,
 				8D2824212671F3CF00FB5753 /* SceneDelegate.swift */,
-				8D2824232671F3CF00FB5753 /* ViewController.swift */,
 				8D2824252671F3CF00FB5753 /* Main.storyboard */,
+				8D2824232671F3CF00FB5753 /* ViewController.swift */,
+				8D17BC802672508400919FDA /* Cell */,
 				8D2824282671F3D000FB5753 /* Assets.xcassets */,
 				8D28242A2671F3D000FB5753 /* LaunchScreen.storyboard */,
 				8D28242D2671F3D000FB5753 /* Info.plist */,
-				8D28243B2671FACA00FB5753 /* FirstCollectionViewCell.swift */,
-				8D28243C2671FACA00FB5753 /* FirstCollectionViewCell.xib */,
-				8D2824402671FAF200FB5753 /* SecondCollectionViewCell.swift */,
-				8D2824412671FAF200FB5753 /* SecondCollectionViewCell.xib */,
 			);
 			path = TwoCollectionView;
 			sourceTree = "<group>";
